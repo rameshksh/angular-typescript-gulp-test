@@ -1,0 +1,39 @@
+{
+    "version": "1.5.3",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true
+    },
+    "files": [
+        "./app/app.ts",
+        "./app/components/about/index.ts",
+        "./app/components/home/index.ts",
+		"./app/components/todo/index.ts",
+        "./app/components/todo/list.ts",
+		"./app/components/todo/list.ts",
+        "./app/init.ts",
+        "./app/typings/_custom.d.ts",
+        "./app/typings/systemjs.d.ts",
+        "./app/typings/angular2/angular2.d.ts",
+		"./app/typings/firebase/firebase.d.ts",
+		"./app/typings/q/q.d.ts",
+		"./app/typings/jquery/jquery.d.ts",
+        "./app/typings/angular2/router.d.ts",
+        "./app/typings/es6-promise/es6-promise.d.ts",
+        "./app/typings/rx/rx-lite.d.ts",
+        "./app/typings/rx/rx.d.ts",
+        "./app/typings/tsd.d.ts"
+    ],
+    "filesGlob": [
+        "./app/**/*.ts",
+        "./app/typings/**/*.ts"
+    ],
+    "compileOnSave": false
+}

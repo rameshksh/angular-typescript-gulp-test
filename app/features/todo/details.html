@@ -1,0 +1,30 @@
+﻿<div class="panel-default" ng-init="onInit()">
+    <div class="panel-body details">
+        <div class="col-sm-12 content-header title">
+            <div class="pull-left">
+                {{vm.todo.Title}}
+            </div>
+            <div class="pull-right">
+                <button class="btn btn-primary" ng-click="vm.editTodo()">Edit</button>
+            </div>
+        </div>
+        <div class="col-sm-12  desc ">
+            <div class="col-sm-12 form-group">
+                <label>Description</label> {{vm.todo.Description}}
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <label>Created On :</label> {{vm.todo.CreatedDate}}
+                </div>
+                <div class="col-sm-12">
+                    <label>Due Date:</label> {{vm.todo.DueDate}}
+                </div>
+                <div class="col-sm-12">
+                    <label>Status:</label> {{vm.todo.Status ?  'Active' : 'InActive'}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

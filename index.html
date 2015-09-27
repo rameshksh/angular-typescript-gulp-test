@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularToDo App</title>
+    <base href="<%= APP_BASE %>">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <!-- inject:css -->
+    <!-- endinject -->
+</head>
+<body class="todo container-fluid" ng-controller="appCtrl as vm">
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <section class="header">
+        <nav class="navbar navbar-default navbar-static-top wrapper">
+            <div class="container">
+                <ul class="list-inline">
+                    <li ng-class="{active:vm.isHomeActiveTab}"><a ui-sref="home" >Home</a></li>
+                    <li ng-class="{active:vm.isAboutActiveTab}"><a ui-sref="about" >About</a></li>
+                    <li ng-class="{active: vm.isTodoActiveTab}"><a ui-sref="todos" >Todo</a></li>
+                </ul>
+            </div>            
+        </nav>
+    </section>
+    <section class="content">
+        <div class="wrapper">
+            <div ui-view="menuContent"></div>
+        </div>
+    </section>
+
+    <script src="main.js?v=1.0.0.0"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿<ul id="todo-list" class="form list list-unstyled">
+    <li class="row" ng-repeat="todo in todos">
+        <div class="col-sm-12" ng-click="getDetails($event)">           
+                <div class="col-sm-11">
+                    <div class="title"> {{todo.title}}   </div>
+                    <div class="desc"> {{todo.description}}   </div>
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn btn-danger btn-sm" ng-click="removeTodo($event, todo.id)"></button>
+                </div>
+        </div>
+    </li>
+</ul>

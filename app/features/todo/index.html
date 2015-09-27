@@ -1,0 +1,36 @@
+﻿<section class="row" ng-init="onInit()">
+    <form class="form-group col-sm-12">
+        <div class="form-group col-sm-10  pad-20">
+            <div class="pad-20">
+                <input type='text' class="form-control col-sm-6" data-ng-model="todo.Title">
+            </div>
+            <div class="pad-20">
+                <textarea class="form-control col-sm-6 top-10"
+                          ng-model="todo.Description"></textarea>
+            </div>
+        </div>
+
+        <div class="col-sm-2 pad-20 top-30">
+            <button class="btn btn-primary" ng-click="vm.addTodo()">Add</button>
+        </div>
+    </form>
+</section>
+<section class="panel panel-default">
+    <div class="form-group pad-10">
+        <label>Total Notes : {{vm.todos.length}}</label>
+    </div>
+    
+    <ul id="todo-list" class="form list list-unstyled">
+        <li class="row" data-ng-repeat="todo in vm.todos">
+            <div class="col-sm-12">
+                <div class="col-sm-11" ng-click="vm.getDetails($event, todo.Id)">
+                    <div class="title"> {{todo.Title}}   </div>
+                    <div class="desc"> {{todo.Description}}   </div>
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn btn-danger btn-sm" ng-click="vm.removeTodo($event, todo.Id)"></button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
